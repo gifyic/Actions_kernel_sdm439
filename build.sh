@@ -3,7 +3,7 @@ echo "更新源，以及安装所需环境" && sudo apt update && sudo apt-get i
 if [ -d $GITHUB_WORKSPACE/kernel_cherry_sdm439 ];then
    echo "内核源码已存在，跳过下载"
 else 
-   echo "内核源码未下载，开始下载" && https://github.com/gifyic/kernel_cherry_sdm439.git --depth=1
+   echo "内核源码未下载，开始下载" && git clone https://github.com/gifyic/kernel_cherry_sdm439.git --depth=1
 fi
 if [ -d $GITHUB_WORKSPACE/Candy_clang-20201120.tar.zst ];then
    echo "ClangBuiltLinux Clang 已下载，跳过下载"
