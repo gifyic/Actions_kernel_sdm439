@@ -23,7 +23,3 @@ args="-j$(nproc --all) \
 	CROSS_COMPILE_ARM32=$GITHUB_WORKSPACE/cbl/bin/arm-linux-gnueabi- "
 	make ${args} cherry-sdm439_defconfig
 	make ${args}
-curl -sL https://git.io/cowtransfer | sh
-cd $GITHUB_WORKSPACE/kernel_cherry_sdm439/out/arch/arm64/boot
-zip -q -r kernel.zip *
-./cowtransfer-uploader $GITHUB_WORKSPACE/kernel_cherry_sdm439/out/arch/arm64/boot/kernel.zip
