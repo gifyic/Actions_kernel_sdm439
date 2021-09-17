@@ -2,6 +2,10 @@ name: sdm439 kernel
 on:
   watch:
     types: [started]
+    
+env: 
+  TZ: Asia/Shanghai
+  
 jobs:
   build:
     runs-on: ubuntu-latest
