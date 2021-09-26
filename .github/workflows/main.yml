@@ -20,7 +20,8 @@ jobs:
             
        - name: File transferred out of the
          run: |
-            curl -sL https://git.io/cowtransfer | sh
             cd $GITHUB_WORKSPACE/kernel_cherry_sdm439/out/arch/arm64/boot
+            curl -sL https://git.io/cowtransfer | sh
+            chmod +x cowtransfer-uploader
             zip -q -r kernel.zip *
             ./cowtransfer-uploader ./kernel.zip
