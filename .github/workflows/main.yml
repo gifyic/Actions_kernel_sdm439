@@ -1,7 +1,9 @@
-name: sdm439 kernel 
+name: sagit-kernel 
 on:
-  watch:
-    types: [started]
+  push:
+    branches: [ text ]
+  pull_request:
+    branches: [ text ]
     
 env: 
   TZ: Asia/Shanghai
