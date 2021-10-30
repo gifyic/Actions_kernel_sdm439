@@ -4,13 +4,3 @@ git clone https://github.com/gifyic/kernel_cherry_sdm439.git --depth=1
 wget https://morning-grape-butterkase.glitch.me/OnedriveXbot/Candy_clang-20201120.tar.zst
 sudo apt-get install -y zstd
 mkdir cbl && tar -I zstd -xvf Candy_clang-20201120.tar.zst -C cbl
-cd $GITHUB_WORKSPACE/kernel_cherry_sdm439
-args="-j$(nproc --all) \
-	O=out \
-	ARCH=arm64 \
-	CLANG_TRIPLE=aarch64-linux-gnu- \
-	CROSS_COMPILE=$GITHUB_WORKSPACE/cbl/bin/aarch64-linux-gnu- \
-	CC=$GITHUB_WORKSPACE/cbl/bin/clang \
-	CROSS_COMPILE_ARM32=$GITHUB_WORKSPACE/cbl/bin/arm-linux-gnueabi- "
-	make ${args} cherry-sdm439_defconfig
-	make ${args}
