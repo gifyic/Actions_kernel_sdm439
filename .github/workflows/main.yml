@@ -16,12 +16,12 @@ jobs:
       
        - name: Start Building
          run: |
-            chmod +x build.sh && ./build.sh
+            bash ./build.sh
             
-       - name: File transferred out of the
+       - name: Build Kernel
          run: |
-            cd $GITHUB_WORKSPACE/kernel_cherry_sdm439/out/arch/arm64/boot
-            curl -sL https://git.io/cowtransfer | sh
-            chmod +x cowtransfer-uploader
-            zip -q -r kernel.zip *
-            ./cowtransfer-uploader ./kernel.zip
+            bash ./Start.sh
+            
+       - name: Upload Kernel
+         run: |
+            bash ./Upload
