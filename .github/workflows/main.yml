@@ -24,4 +24,4 @@ jobs:
             
        - name: Upload Kernel
          run: |
-            bash ./Upload
+            bash ./Upload.sh
